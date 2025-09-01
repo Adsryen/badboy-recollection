@@ -1,20 +1,95 @@
 {
   "records": [
     {
-      "name": "示例对象A",
+      "name": "芷晴",
       "startDate": "2023-07-01",
       "endDate": "2023-11-15",
-      "tags": ["同学", "短期"],
-      "notes": "这是一个示例记录。可在本地用 records.json 覆盖为真实数据。",
+      "tags": ["同学", "短期", "风情", "性感", "轻束缚"],
+      "notes": "笑意里带点坏，薄荷与皮革的味道若即若离；在盛夏夜色里，我们把主动权交替握紧。",
+      "avatar": "placeholder.svg",
+      "album": "demo/",
       "links": [
         { "title": "相册", "url": "https://example.com/photos" }
       ]
     },
     {
-      "name": "示例对象B",
+      "name": "清妍",
       "startDate": "2024-02",
-      "tags": ["同事"],
-      "notes": "支持 YYYY-MM 或 YYYY-MM-DD 日期格式。",
+      "tags": ["同事", "成熟", "风情", "轻束缚"],
+      "notes": "表面冷静，眼神却会勾人；当她压低声线，秩序与放纵在桌下轻碰杯。",
+      "avatar": "placeholder.svg",
+      "album": "demo/",
+      "links": []
+    },
+    {
+      "name": "洛汐",
+      "startDate": "2016-03",
+      "endDate": "2016-12",
+      "tags": ["校园", "文艺", "性感", "暗涌"],
+      "notes": "白衬衫与红唇的反差，像雨后的操场——干净里藏着一点点不乖。",
+      "avatar": "placeholder.svg",
+      "links": [{ "title": "歌单", "url": "https://example.com/playlist-2016" }]
+    },
+    {
+      "name": "可欣",
+      "startDate": "2017-04",
+      "endDate": "2017-10",
+      "tags": ["短期", "旅行", "浪荡", "夜色"],
+      "notes": "风把裙摆和边界一起掀起，我们在陌生的城市学会更大胆的路线。",
+      "avatar": "placeholder.svg",
+      "links": [{ "title": "旅行记", "url": "https://example.com/trip-2017" }]
+    },
+    {
+      "name": "慕雪",
+      "startDate": "2018-06",
+      "endDate": "2019-01",
+      "tags": ["同事", "理性", "控制欲", "轻束缚"],
+      "notes": "会议室里说规则，电梯里说例外；手腕的暗示比语言更锋利。",
+      "avatar": "placeholder.svg",
+      "links": []
+    },
+    {
+      "name": "星婉",
+      "startDate": "2019-09",
+      "endDate": "2020-03",
+      "tags": ["异地", "文艺", "风情", "松绑"],
+      "notes": "隔着时差练习把欲望说清楚，写给她的信都带着不按时寄出的叛逆。",
+      "avatar": "placeholder.svg",
+      "links": [{ "title": "书单", "url": "https://example.com/books-2019" }]
+    },
+    {
+      "name": "语桐",
+      "startDate": "2020-05",
+      "endDate": "2020-12",
+      "tags": ["短期", "运动", "挑逗", "汗感"],
+      "notes": "晨跑的节奏像心跳在逼近，她笑着拉住我的帽檐——谁都不肯先认输。",
+      "avatar": "placeholder.svg",
+      "links": []
+    },
+    {
+      "name": "沫沫",
+      "startDate": "2021-01",
+      "endDate": "2021-08",
+      "tags": ["温柔", "美食", "香气", "性感"],
+      "notes": "香草与焦糖在指尖黏住，甜得过分，也刚好适合被轻轻惩罚。",
+      "avatar": "placeholder.svg",
+      "links": [{ "title": "私房菜谱", "url": "https://example.com/recipes-2021" }]
+    },
+    {
+      "name": "安然",
+      "startDate": "2022-02",
+      "endDate": "2022-11",
+      "tags": ["成熟", "安静", "克制", "深流"],
+      "notes": "把欲念收好像打结的丝带，松与紧之间，她总能准确地拉回我。",
+      "avatar": "placeholder.svg",
+      "links": []
+    },
+    {
+      "name": "云舒",
+      "startDate": "2025-01",
+      "tags": ["治愈", "慢热", "暧昧", "轻束缚"],
+      "notes": "慢慢靠近的安全感，像丝绸轻覆眼帘的那一瞬，世界只剩她的呼吸。",
+      "avatar": "placeholder.svg",
       "links": []
     }
   ]

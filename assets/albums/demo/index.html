@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>示例相册 | demo</title>
+  <style>
+    :root { --bg:#0b1222; --text:#e2e8f0; --muted:#94a3b8; --card:#0f172a; --border:#243045; --accent:#22d3ee; }
+    body{margin:0;background:var(--bg);color:var(--text);font:14px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji"}
+    .wrap{max-width:960px;margin:32px auto;padding:0 16px}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px;margin-top:16px}
+    .ph{aspect-ratio:4/3;border:1px dashed var(--border);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--muted)}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>示例相册 demo</h1>
+    <div class="card">
+      <p>这是一个占位的相册页面。你可以将真实相册文件放入目录 <code>assets/albums/demo/</code> 并替换本页内容。</p>
+      <p>
+        返回主页：<a href="/">index.html</a>
+      </p>
+      <div class="grid">
+        <div class="ph">占位图 1</div>
+        <div class="ph">占位图 2</div>
+        <div class="ph">占位图 3</div>
+        <div class="ph">占位图 4</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -21,6 +21,8 @@ body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,
 .card-header{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:8px}
 .name{margin:0;font-size:18px}
 .dates{color:var(--muted);font-size:12px}
+.person{display:flex;align-items:center;gap:10px}
+.avatar{width:36px;height:36px;border-radius:50%;object-fit:cover;border:1px solid var(--border);background:#0b1222}
 .tags{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
 .tag{display:inline-block;padding:4px 8px;border:1px solid var(--border);border-radius:999px;font-size:12px;color:#e6fbff;background:#0b1222}
 .notes{margin:8px 0 0;line-height:1.5;color:#e2e8f0}

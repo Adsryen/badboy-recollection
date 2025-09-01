@@ -12,6 +12,11 @@ async function loadData() {
   return fallback.json();
 }
 
+// 静态资源目录（统一管理）
+const AVATAR_DIR = 'assets/avatars';
+const ALBUM_DIR = 'assets/albums';
+const DEFAULT_AVATAR = `${AVATAR_DIR}/placeholder.svg`;
+
 function parseDate(s) {
   // 支持 YYYY-MM 或 YYYY-MM-DD
   if (!s) return null;
@@ -71,10 +76,16 @@ function createCard(r, index) {
   el.className = 'card';
   const dateRange = [formatDate(r.startDate), formatDate(r.endDate)].filter(Boolean).join(' ~ ');
   const tags = (r.tags || []).map(t => `<span class="tag">${t}</span>`).join('');
-  const links = (r.links || []).map(l => `<a href="${l.url}" target="_blank" rel="noreferrer noopener">${l.title||'链接'}</a>`).join(' · ');
+  const baseLinks = (r.links || []).map(l => `<a href="${l.url}" target="_blank" rel="noreferrer noopener">${l.title||'链接'}</a>`);
+  const albumLink = r.album ? [`<a href="${ALBUM_DIR}/${r.album}" target="_blank" rel="noreferrer noopener">相册</a>`] : [];
+  const links = [...baseLinks, ...albumLink].join(' · ');
   el.innerHTML = `
     <header class="card-header">
-      <h3 class="name">${r.name || '未知'}</h3>
+      <div class="person">
+        <img class="avatar" src="${r.avatar ? `${AVATAR_DIR}/${r.avatar}` : DEFAULT_AVATAR}" alt="${r.name||''}"
+             onerror="this.onerror=null;this.src='${DEFAULT_AVATAR}'" />
+        <h3 class="name">${r.name || '未知'}</h3>
+      </div>
       ${dateRange ? `<div class="dates">${dateRange}</div>` : ''}
     </header>
     ${tags ? `<div class="tags">${tags}</div>` : ''}
