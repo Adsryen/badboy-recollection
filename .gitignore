@@ -38,3 +38,4 @@ Thumbs.db
 
 # 数据：本地私有数据不要提交（示例文件可提交）
 data/local*.json
+data/records.json

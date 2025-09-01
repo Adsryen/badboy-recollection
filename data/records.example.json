@@ -1,0 +1,21 @@
+{
+  "records": [
+    {
+      "name": "示例对象A",
+      "startDate": "2023-07-01",
+      "endDate": "2023-11-15",
+      "tags": ["同学", "短期"],
+      "notes": "这是一个示例记录。可在本地用 records.json 覆盖为真实数据。",
+      "links": [
+        { "title": "相册", "url": "https://example.com/photos" }
+      ]
+    },
+    {
+      "name": "示例对象B",
+      "startDate": "2024-02",
+      "tags": ["同事"],
+      "notes": "支持 YYYY-MM 或 YYYY-MM-DD 日期格式。",
+      "links": []
+    }
+  ]
+}

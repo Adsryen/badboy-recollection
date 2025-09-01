@@ -1,7 +1,15 @@
 async function loadData() {
-  const res = await fetch('data/records.json', { cache: 'no-store' });
-  if (!res.ok) throw new Error('无法加载数据: ' + res.status);
-  return res.json();
+  // 优先加载真实数据，其次回退到示例数据
+  try {
+    const res = await fetch('data/records.json', { cache: 'no-store' });
+    if (res.ok) return res.json();
+    console.warn('records.json 不可用，状态：', res.status, '，尝试加载 records.example.json');
+  } catch (e) {
+    console.warn('加载 records.json 失败，尝试加载 records.example.json：', e);
+  }
+  const fallback = await fetch('data/records.example.json', { cache: 'no-store' });
+  if (!fallback.ok) throw new Error('无法加载数据（records.json 与 records.example.json 均不可用）：' + fallback.status);
+  return fallback.json();
 }
 
 function parseDate(s) {
