@@ -1,0 +1,76 @@
+:root{--bg:#0f172a;--panel:#111827;--card:#1f2937;--accent:#22d3ee;--text:#e5e7eb;--muted:#9ca3af;--border:#374151;}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;background:linear-gradient(180deg,#0b1020,#0f172a);color:var(--text)}
+
+.app-header{padding:28px 20px;text-align:center}
+.app-header h1{margin:0;font-size:28px;letter-spacing:0.5px}
+.subtitle{margin:6px 0 0;color:var(--muted);font-size:14px}
+
+.container{max-width:980px;margin:0 auto;padding:0 16px 40px}
+.controls{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between;margin:10px 0 18px}
+.controls input[type=search]{flex:1 1 360px;min-width:220px;padding:10px 12px;border:1px solid var(--border);border-radius:8px;background:#0b1222;color:var(--text)}
+.controls select{padding:10px 12px;border:1px solid var(--border);border-radius:8px;background:#0b1222;color:var(--text)}
+.btn{padding:10px 14px;border:1px solid var(--border);border-radius:8px;background:var(--card);color:var(--text);cursor:pointer}
+.btn:hover{border-color:var(--accent);color:#fff}
+
+.stats{color:var(--muted);margin:12px 2px}
+
+.card-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px}
+.card-header{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:8px}
+.name{margin:0;font-size:18px}
+.dates{color:var(--muted);font-size:12px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
+.tag{display:inline-block;padding:4px 8px;border:1px solid var(--border);border-radius:999px;font-size:12px;color:#e6fbff;background:#0b1222}
+.notes{margin:8px 0 0;line-height:1.5;color:#e2e8f0}
+.links{margin-top:10px;font-size:13px}
+.links a{color:var(--accent);text-decoration:none}
+.links a:hover{text-decoration:underline}
+
+.app-footer{max-width:980px;margin:24px auto 40px;padding:0 16px;color:var(--muted);text-align:center}
+
+.error{padding:12px;border:1px solid #ef4444;background:#2f0b0b;border-radius:10px}
+
+/* Toolbar */
+.toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:12px 0}
+.toolbar .left,.toolbar .right{display:flex;gap:8px;flex-wrap:wrap}
+
+/* Buttons */
+.btn.primary{background:linear-gradient(180deg,#0aaac2,#0891b2);border-color:#0aaac2;color:#fff}
+.btn.primary:hover{filter:brightness(1.06)}
+.btn.small{padding:6px 10px;font-size:12px;border-radius:6px}
+.btn.danger{border-color:#b91c1c;color:#fecaca}
+.btn.danger:hover{background:#7f1d1d;border-color:#ef4444}
+
+/* Editor panel */
+.panel{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:16px;margin-top:18px}
+.panel-title{margin:0 0 10px 0;font-size:18px}
+.form{display:flex;flex-direction:column;gap:12px}
+.field{display:flex;flex-direction:column;gap:6px}
+.field.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.form input,.form textarea,.form select{width:100%;padding:10px 12px;border:1px solid var(--border);border-radius:8px;background:#0b1222;color:var(--text)}
+.actions{display:flex;gap:8px;justify-content:flex-end}
+
+/* Card actions */
+.card-actions{display:flex;gap:8px;margin-top:10px}
+
+/* Charts */
+.charts{margin-top:22px}
+.chart-title{margin:0 0 10px 0;color:var(--muted);font-size:14px}
+.chart-group{display:grid;grid-template-columns:1fr;gap:14px}
+@media (min-width: 720px){.chart-group{grid-template-columns:1fr 1fr}}
+.chart{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:12px}
+.bar{position:relative;display:flex;align-items:center;gap:8px;margin:6px 0}
+.bar-fill{display:inline-block;height:10px;border-radius:6px;background:linear-gradient(90deg,var(--accent),#60a5fa)}
+.bar-label{font-size:12px;color:var(--muted)}
+.muted{color:var(--muted);font-size:12px}
+
+/* Light theme */
+[data-theme='light']{--bg:#f8fafc;--panel:#ffffff;--card:#ffffff;--accent:#0891b2;--text:#111827;--muted:#6b7280;--border:#e5e7eb}
+[data-theme='light'] body{background:linear-gradient(180deg,#f3f4f6,#f8fafc)}
+[data-theme='light'] .controls input[type=search],
+[data-theme='light'] .controls select,
+[data-theme='light'] .form input,
+[data-theme='light'] .form textarea,
+[data-theme='light'] .form select{background:#ffffff}

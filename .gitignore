@@ -1,0 +1,40 @@
+# Node/前端通用
+node_modules/
+.pnp/
+.pnpm-store/
+.npm/
+.yarn/*
+.yarnrc.yml
+
+# 构建产物
+.dist/
+dist/
+build/
+.coverage/
+coverage/
+.vite/
+.cache/
+.tmp/
+**/.DS_Store
+Thumbs.db
+
+# IDE/编辑器
+.vscode/
+.idea/
+*.log
+
+# 环境/密钥（尽量不要使用在纯前端）
+.env
+.env.*
+
+# 运行时/平台
+.vercel/
+.netlify/
+
+# OneDrive临时/冲突文件（保险起见）
+~$*
+*.tmp
+*.temp
+
+# 数据：本地私有数据不要提交（示例文件可提交）
+data/local*.json

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Badboy Recollection | 渣男感情史记录</title>
+    <meta name="description" content="一个纯前端、以 JSON 保存数据的渣男感情史记录工具" />
+    <link rel="stylesheet" href="src/css/styles.css" />
+    <link rel="icon" href="src/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" href="src/favicon-32x32.png" sizes="32x32" />
+  </head>
+  <body>
+    <header class="app-header">
+      <h1>Badboy Recollection</h1>
+      <p class="subtitle">纯前端项目 · 数据以 JSON 保存在 <code>data/records.json</code></p>
+    </header>
+
+    <main class="container">
+      <section class="toolbar">
+        <div class="left">
+          <button id="btnImport" class="btn" type="button" data-i18n="import">导入 JSON</button>
+          <input id="fileInput" type="file" accept="application/json,.json" style="display:none" />
+          <button id="btnExport" class="btn" type="button" data-i18n="export">导出 JSON</button>
+          <button id="btnAdd" class="btn" type="button" data-i18n="add">新增记录</button>
+        </div>
+        <div class="right">
+          <select id="langSelect" aria-label="语言 Language">
+            <option value="zh">中文</option>
+            <option value="en">English</option>
+          </select>
+          <button id="themeToggle" class="btn" type="button" data-i18n="theme">切换主题</button>
+        </div>
+      </section>
+      <section class="controls">
+        <input id="searchInput" type="search" placeholder="搜索：姓名、标签、备注…" aria-label="搜索" />
+        <select id="tagFilter" aria-label="标签筛选">
+          <option value="">所有标签</option>
+        </select>
+        <button id="sortBtn" type="button" class="btn" data-order="desc">按时间排序（新→旧）</button>
+      </section>
+
+      <section id="stats" class="stats" aria-live="polite"></section>
+
+      <section id="cardList" class="card-list" aria-live="polite"></section>
+
+      <section id="charts" class="charts">
+        <h2 class="chart-title" data-i18n="charts">统计图表</h2>
+        <div class="chart-group">
+          <div class="chart" id="yearChart" aria-label="按年份统计"></div>
+          <div class="chart" id="tagChart" aria-label="按标签统计"></div>
+        </div>
+      </section>
+
+      <section id="editorPanel" class="panel" hidden>
+        <h2 class="panel-title" data-i18n="editor">编辑记录</h2>
+        <form id="editorForm" class="form">
+          <div class="field">
+            <label for="fName" data-i18n="name">姓名</label>
+            <input id="fName" name="name" type="text" required />
+          </div>
+          <div class="field two">
+            <div>
+              <label for="fStart" data-i18n="start">开始日期</label>
+              <input id="fStart" name="startDate" type="text" placeholder="YYYY-MM 或 YYYY-MM-DD" />
+            </div>
+            <div>
+              <label for="fEnd" data-i18n="end">结束日期</label>
+              <input id="fEnd" name="endDate" type="text" placeholder="YYYY-MM 或 YYYY-MM-DD" />
+            </div>
+          </div>
+          <div class="field">
+            <label for="fTags" data-i18n="tags">标签（逗号分隔）</label>
+            <input id="fTags" name="tags" type="text" placeholder="校园, 异地" />
+          </div>
+          <div class="field">
+            <label for="fNotes" data-i18n="notes">备注</label>
+            <textarea id="fNotes" name="notes" rows="3"></textarea>
+          </div>
+          <div class="actions">
+            <button id="btnSave" class="btn primary" type="submit" data-i18n="save">保存</button>
+            <button id="btnCancel" class="btn" type="button" data-i18n="cancel">取消</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <small>请合理使用，注意隐私与合规。建议仅存放非个人敏感的示例数据。</small>
+    </footer>
+
+    <script type="module" src="src/js/main.js"></script>
+  </body>
+</html>
