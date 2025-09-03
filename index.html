@@ -16,6 +16,7 @@
     </header>
 
     <main class="container">
+      <div class="ui-shell">
       <section class="toolbar">
         <div class="left">
           <button id="btnImport" class="btn" type="button" data-i18n="import">导入 JSON</button>
@@ -37,23 +38,41 @@
           <option value="">所有标签</option>
         </select>
         <button id="sortBtn" type="button" class="btn" data-order="desc">按时间排序（新→旧）</button>
+        <label for="scaleSelect" style="margin-left:8px;color:var(--muted)">时间缩放</label>
+        <select id="scaleSelect" aria-label="时间缩放">
+          <option value="0.4">0.4x</option>
+          <option value="0.5">0.5x</option>
+          <option value="0.6">0.6x</option>
+          <option value="0.8">0.8x</option>
+          <option value="1">1.0x</option>
+        </select>
       </section>
 
       <section id="stats" class="stats" aria-live="polite"></section>
 
-      <section id="cardList" class="card-list" aria-live="polite"></section>
+      <!-- 视图切换器 -->
+      <div class="view-tabs">
+        <button id="timelineTab" class="tab-btn active" data-view="timeline">时间轴</button>
+        <button id="chartsTab" class="tab-btn" data-view="charts">统计图</button>
+      </div>
+      </div>
 
-      <section id="charts" class="charts">
-        <h2 class="chart-title" data-i18n="charts">统计图表</h2>
-        <div class="chart-group">
-          <div class="chart" id="yearChart" aria-label="按年份统计"></div>
-          <div class="chart" id="tagChart" aria-label="按标签统计"></div>
-        </div>
-      </section>
+      <div class="visual-shell">
+        <!-- 时间线/卡片列表 -->
+        <section id="timeline" class="timeline"></section>
+        <section id="cardList" class="card-list" hidden></section>
 
-      <section id="editorPanel" class="panel" hidden>
-        <h2 class="panel-title" data-i18n="editor">编辑记录</h2>
-        <form id="editorForm" class="form">
+        <section id="charts" class="charts" hidden>
+          <h2 class="chart-title" data-i18n="charts">统计图表</h2>
+          <div class="chart-group">
+            <div class="chart" id="yearChart" aria-label="按年份统计"></div>
+            <div class="chart" id="tagChart" aria-label="按标签统计"></div>
+          </div>
+        </section>
+
+        <section id="editorPanel" class="panel" hidden>
+          <h2 class="panel-title" data-i18n="editor">编辑记录</h2>
+          <form id="editorForm" class="form">
           <div class="field">
             <label for="fName" data-i18n="name">姓名</label>
             <input id="fName" name="name" type="text" required />
@@ -80,8 +99,9 @@
             <button id="btnSave" class="btn primary" type="submit" data-i18n="save">保存</button>
             <button id="btnCancel" class="btn" type="button" data-i18n="cancel">取消</button>
           </div>
-        </form>
-      </section>
+          </form>
+        </section>
+      </div>
     </main>
 
     <footer class="app-footer">
